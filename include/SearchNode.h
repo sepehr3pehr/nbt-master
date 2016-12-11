@@ -42,7 +42,7 @@ SearchNode::SearchNode(UINT8* _code,UINT8* _query,UINT32 _B_over_8, int _max_lvl
 	num_found = 0;
 
 	query_normchunks = (UINT32*) malloc(pow(2,max_lvl+1) * sizeof(UINT32));
-	UINT8* c_query_normchunks = query_normchunks;	 
+	UINT32* c_query_normchunks = query_normchunks;	 
 	for(int i=0;i<max_lvl;i++) {
 		norm_chunks(c_query_normchunks,i,query,B_over_8);
 		c_query_normchunks += pow(2,i);
