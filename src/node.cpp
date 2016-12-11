@@ -152,6 +152,7 @@ void Node::push_to_node(UINT8* _code, UINT32 index) {
 		}
 	}
 }
+
 //
 //UINT64 Node::findchild(UINT8* code) {
 //	UINT64  total_offset=0;

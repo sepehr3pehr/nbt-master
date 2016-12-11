@@ -6,6 +6,9 @@
 #include "nodeops.h"
 #include <stdlib.h>
 #include "bitops.h"
+#include <queue>
+#include <queue_node.h>
+#define nullptr 0
 
 int Node::B_over_8;
 UINT8* Node::dbcode;
@@ -188,4 +191,30 @@ int main(int argc, char**argv)
 	printf("max tree level = %d\n",max_tree_lvl);
 	printf("expansions = %d\n",expansions);
 	printf("Done\n");
+	printf("Searching started...\n");
+	std::queue<Node *> node_queue;
+	node_queue.push(root_node);
+	UINT32 hamm_radius = 0;
+	
+	UINT32 num_found;
+	queue_node start_traversed.ptr = root_node;
+	star_traversed.next = nullptr;
+	
+	queue_node* tailptr = &start_traversed;
+	queue_node* curr = &start_traversed
+
+	
+	for(UINT32 i=0;i<NQ;i++) {
+		num_found = 0;
+		while(hamm_radius<max_radius && num_found<K) {
+			while(curr->next != nullptr) {
+				//check the appropriate child and brute force search among leaf nodes
+				check_leaves_and_add_to_list(tailptr,query_subnorms,curr,hamm_radius);
+
+			}
+			hamm_radius++;
+		}
+		
+	}
+
 }

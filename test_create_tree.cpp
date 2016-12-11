@@ -6,6 +6,7 @@
 #include "nodeops.h"
 #include <stdlib.h>
 #include "bitops.h"
+#include "SearchNode.h"
 
 int Node::B_over_8;
 UINT8* Node::dbcode;
@@ -188,4 +189,24 @@ int main(int argc, char**argv)
 	printf("max tree level = %d\n",max_tree_lvl);
 	printf("expansions = %d\n",expansions);
 	printf("Done\n");
-}
+	codes_query = (UINT8*)malloc((size_t)NQ * (B/8) * sizeof(UINT8));
+	UINT8* codesq, ccodeq;
+        load_bin_codes(infile, "Q", codesq, &NQ, &B_over_8, Q0);
+
+	for (int i=0; i < NQ; i++) {
+		ccodeq += B_over_8;
+		UINT8* set_norm_chunks = new UINT8[(int)pow(2,max_tree_lvl+1)];
+		for(int j=0; j<max_tree_lvl; j++) {
+			norm_chunks(set_norm_chunks,j,ccodeq,B_over_8);
+		}
+		
+		hammin_radius = 0
+		visited_parents_list* = NULL; 
+		SearchNode sn = new SearchNode(codes_db, ccodeq, B_over_8max_tree_lvl);
+	}
+
+
+
+
+
+

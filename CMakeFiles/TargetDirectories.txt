@@ -1,0 +1,3 @@
+/home/s2eghbali/Desktop/nbt/nbt-master/CMakeFiles/edit_cache.dir
+/home/s2eghbali/Desktop/nbt/nbt-master/CMakeFiles/rebuild_cache.dir
+/home/s2eghbali/Desktop/nbt/nbt-master/CMakeFiles/nbt.dir

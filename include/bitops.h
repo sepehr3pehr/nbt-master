@@ -10,6 +10,7 @@
 
 #define popcntll __builtin_popcountll
 #define popcnt __builtin_popcount
+#define ctz __builtin_ctz
 
 #include <stdio.h>
 #include <math.h>
